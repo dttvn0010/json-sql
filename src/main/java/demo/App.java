@@ -12,8 +12,8 @@ public class App
     
     public static void main( String[] args ) throws JSQLParserException, Exception
     {
-        String json = "[{\"col1\": 2, \"col2\": 3 }, {\"col1\": 5, \"col2\": 7 }]";
-        String sql = "select col1+1 as a, col2 as b from table where col1>2";
+        String json = "[{\"col1\": 2, \"col2\": 3 }, {\"col1\": 5, \"col2\": 17 }]";
+        String sql = "select col1+1 as a, col2 as b from table where col1>2 AND (col2 > 10 OR col2 < 1)";
         
         System.out.println("Json:" + json);
         System.out.println("sql:" + sql);
